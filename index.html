@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página de Busca - Exemplo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="avatar" title="Conta"></div>
+  </header>
+
+  <main>
+    <div class="stack">
+      <div class="logo" aria-label="Marca fictícia">
+        <span>G</span><span>oo</span><span>g</span><span>le</span>
+      </div>
+
+      <form class="search" action="https://www.google.com/search" method="get" role="search">
+        <label class="search-card">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+
+          <input name="q" type="text" autocomplete="off" autofocus 
+                 placeholder="Pesquise na web" aria-label="Pesquisar" />
+
+          <button type="button" class="icon" title="Voz (simulado)" aria-label="Pesquisar por voz">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 1 0 6 0V6a3 3 0 0 0-3-3z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" y1="19" x2="12" y2="22"/>
+            </svg>
+          </button>
+        </label>
+
+        <div class="actions">
+          <button class="btn" type="submit">Pesquisar</button>
+          <button class="btn" type="button" 
+                  onclick="document.querySelector('input[name=q]').value='sobre aleatoriedade'; this.closest('form').submit();">
+            Estou com sorte
+          </button>
+        </div>
+      </form>
+
+      <div class="foot">
+        Página de exemplo inspirada no layout da página de busca.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="foot-row">
+      <div class="links">
+        <span>Brasil</span>
+      </div>
+      <div>Direitos reservados</div>
+    </div>
+  </footer>
+</body>
+</html>
